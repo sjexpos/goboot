@@ -1,0 +1,30 @@
+server:
+  port: 4242
+application:
+  banner: Go-boot
+#  name: 
+  log: Info
+datasource:
+#  host: 
+#  port: 
+#  username: 
+#  password: 
+#  schema_name: 
+  pool:
+    max_idle:
+      connections: 10
+    max_open:
+      connections: 100
+    max_lifetime:
+      connection: 1h
+    max_idle_time:
+      connection: 30s
+gorm:
+  log:
+    level: Info
+  query:
+    slow:
+      threshold: 3s
+management:
+  server:
+    port: 4243
