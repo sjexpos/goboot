@@ -2,7 +2,7 @@ package gorm
 
 import (
 	"errors"
-	"goboot/tx"
+	"github.com/sjexpos/goboot/tx"
 	"log/slog"
 
 	"gorm.io/gorm"

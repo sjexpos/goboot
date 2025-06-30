@@ -5,7 +5,7 @@ import (
 	"context"
 	"embed"
 	"fmt"
-	"goboot/log"
+	"github.com/sjexpos/goboot/log"
 	"log/slog"
 	"os"
 	"reflect"

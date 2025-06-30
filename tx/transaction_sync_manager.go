@@ -1,7 +1,7 @@
 package tx
 
 import (
-	"goboot/concurrent"
+	"github.com/sjexpos/goboot/concurrent"
 
 	"gorm.io/gorm"
 )

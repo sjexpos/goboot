@@ -2,7 +2,7 @@ package supportfx
 
 import (
 	"database/sql"
-	"goboot/datasource"
+	"github.com/sjexpos/goboot/datasource"
 	"log/slog"
 
 	"go.uber.org/fx"

@@ -1,8 +1,8 @@
 package supportfx
 
 import (
-	"goboot/gorm"
-	"goboot/tx"
+	"github.com/sjexpos/goboot/gorm"
+	"github.com/sjexpos/goboot/tx"
 
 	"go.uber.org/fx"
 )

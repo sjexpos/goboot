@@ -3,7 +3,7 @@ package supportfx
 import (
 	"context"
 	"fmt"
-	"goboot/management"
+	"github.com/sjexpos/goboot/management"
 	"log/slog"
 	"net"
 	"net/http"

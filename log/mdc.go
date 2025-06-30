@@ -1,6 +1,6 @@
 package log
 
-import "goboot/concurrent"
+import "github.com/sjexpos/goboot/concurrent"
 
 var MDC mdc = mdc{}
 

@@ -3,7 +3,7 @@ package log
 import (
 	"context"
 	"fmt"
-	"goboot/concurrent"
+	"github.com/sjexpos/goboot/concurrent"
 	"log/slog"
 )
 

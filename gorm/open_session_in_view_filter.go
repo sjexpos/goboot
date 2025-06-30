@@ -1,7 +1,7 @@
 package gorm
 
 import (
-	"goboot/tx"
+	"github.com/sjexpos/goboot/tx"
 	"log/slog"
 
 	"github.com/gin-gonic/gin"
