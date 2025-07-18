@@ -1,0 +1,124 @@
+server:
+  port: 4242
+application:
+  banner: Go-boot
+#  name: 
+  log: Info
+datasource:
+#  host: 
+#  port: 
+#  username: 
+#  password: 
+#  schema_name: 
+  pool:
+    max_idle:
+      connections: 10
+    max_open:
+      connections: 100
+    max_lifetime:
+      connection: 1h
+    max_idle_time:
+      connection: 30s
+gorm:
+  open-session-in-view:
+    enabled: true
+  log:
+    level: Info
+  query:
+    slow:
+      threshold: 3s
+management:
+  server:
+    port: 4243
+
+open-api-v3:
+  api-docs:
+    path: /api
+  swagger-ui:
+    path: /docs
+#  info:
+#    title:
+#    description:
+#    termsOfService:
+#    version:
+#   contact:
+#     name:
+#     url:
+#     email:
+#   license:
+#     name:
+#     url:
+#   xlogo:
+#     url:
+#     backgroundColor:
+#     altText:
+#     href:
+#  servers:
+#    - url: url1
+#      description: server1
+#      variables:
+#        var1: 
+#          Enum:
+#            - val1
+#            - val2
+#            - val3
+#          Default: val2
+#          Description: description
+#        var2:
+#    - url: url2
+#      description: server2
+#  securityRequirement:
+#    - req1.1:
+#        - val1
+#        - val2
+#      req1.2:
+#        - valA
+#        - valB
+#    - req2.1:
+#        - val1
+#        - val2
+#      req2.2:
+#        - valA
+#        - valB
+#  securitySchemes:
+#    oauth2:
+#      SecurityScheme:
+#        type: t1
+#        schema: s1
+#        bearerFormat: algo1
+#        description:
+#        in:
+#        name:
+#        openIdConnectUrl:
+#        flows:
+#          implicit:
+#            authorizationUrl:
+#            tokenUrl:
+#            refreshUrl:
+#            scopes:
+#              k1: v1
+#              k2: v2
+#          password:
+#            authorizationUrl:
+#            tokenUrl:
+#            refreshUrl:
+#            scopes:
+#              k1: v1
+#              k2: v2
+#          clientCredentials:
+#            authorizationUrl:
+#            tokenUrl:
+#            refreshUrl:
+#            scopes:
+#              k1: v1
+#              k2: v2
+#          authorizationCode:
+#            authorizationUrl:
+#            tokenUrl:
+#            refreshUrl:
+#            scopes:
+#              k1: v1
+#              k2: v2
+#    simple:
+#      Reference:
+#        Ref: https://www.example.com

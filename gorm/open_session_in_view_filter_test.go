@@ -13,7 +13,7 @@ func Test(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Gorm connection error: %v", err)
 	}
-	f := CreateOpenSessionInViewFilter(db)
+	f := NewOpenSessionInViewFilter(db)
 	ctx := &gin.Context{}
-	f(ctx)
+	f.DoFilter(ctx)
 }

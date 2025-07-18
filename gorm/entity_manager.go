@@ -10,8 +10,8 @@ type EntityManager interface {
 	Get() *gorm.DB
 }
 
-func NewEntityManager() EntityManager {
-	return &entityManagerImpl{}
+func NewEntityManager() (EntityManager, error) {
+	return &entityManagerImpl{}, nil
 }
 
 type entityManagerImpl struct {

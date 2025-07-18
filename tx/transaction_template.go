@@ -9,11 +9,11 @@ type TransactionTemplate struct {
 	txManager *TransactionManager
 }
 
-func NewTransactionTemplate(txManager *TransactionManager) *TransactionTemplate {
+func NewTransactionTemplate(txManager *TransactionManager) (*TransactionTemplate, error) {
 	return &TransactionTemplate{
 		logger:    slog.With().WithGroup("TransactionTemplate"),
 		txManager: txManager,
-	}
+	}, nil
 }
 
 func (tpl *TransactionTemplate) Execute(action TransactionCallback) (result any, err error) {

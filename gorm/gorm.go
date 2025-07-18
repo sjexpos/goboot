@@ -3,7 +3,6 @@ package gorm
 import (
 	"database/sql"
 	"log/slog"
-	"os"
 	"time"
 
 	"gorm.io/driver/postgres"
@@ -11,7 +10,7 @@ import (
 	"gorm.io/gorm/schema"
 )
 
-func NewORM(sqlDB *sql.DB, logLevel string, slowThreshold time.Duration) *gorm.DB {
+func NewORM(sqlDB *sql.DB, logLevel string, slowThreshold time.Duration) (*gorm.DB, error) {
 	gormDB, errGorm := gorm.Open(postgres.New(postgres.Config{
 		Conn: sqlDB,
 	}), &gorm.Config{
@@ -24,9 +23,8 @@ func NewORM(sqlDB *sql.DB, logLevel string, slowThreshold time.Duration) *gorm.D
 		TranslateError: true,
 	})
 	if errGorm != nil {
-		slog.Error(errGorm.Error())
-		os.Exit(1)
+		return nil, errGorm
 	}
 	slog.Info("Initialized Gorm for persistence")
-	return gormDB
+	return gormDB, nil
 }

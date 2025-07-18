@@ -12,13 +12,13 @@ type TransactionManager struct {
 	db     *gorm.DB
 }
 
-func NewTransactionManager(db *gorm.DB) *TransactionManager {
+func NewTransactionManager(db *gorm.DB) (*TransactionManager, error) {
 	txManager := &TransactionManager{
 		logger: slog.With().WithGroup("TransactionManager"),
 		db:     db,
 	}
 	txManager.logger.Info("TransactionManager was created")
-	return txManager
+	return txManager, nil
 }
 
 type transactionObject struct {
